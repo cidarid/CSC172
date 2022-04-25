@@ -1,0 +1,7 @@
+Spencer Fletcher, Jacob Trokel
+
+Run this file by entering in the command line java StopContagion (-d) (-r RADIUS) (-t) num_nodes input_file, where all arguments in parantheses are optional. If -d is added, then degree search is used instead of influence search. -r RADIUS specifies the radius for search as RADIUS, if not specified the default is 2. -t specifies whether or not to print out trace, which will display the connected components after each node removal. num_nodes is mandatory,  and specifies how many nodes should be removed. input_file is also mandatory, and specifies the file that the graph is being created from. 
+
+This program creates a graph from the passed file, and then searches for that graph using the passed parameters. Degree first removes the top num_nodes nodes from the graph, while influence search uses the influence to determine which nodes will be removed. The nodes removed are printed for degree first as (value connections), and for influence search as (value influence). These values are printed to standard output. 
+
+Sources used: findBall and findCollectiveInfluence use elements from the Breadth-First search found in Algorithms 4th Edition, Sedgewick - Wayne.

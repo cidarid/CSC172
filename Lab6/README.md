@@ -1,0 +1,2 @@
+Authors: Spencer Fletcher, Jacob Trokel
+This lab focused on understanding big O runtimes of various sorting algorithms. Everything in sorting.java was written by me or my partner Jacob. Please keep in mind that the poor coding was due to the constraints of the assignment rather than our personal choice of how to structure our code. 

@@ -1,7 +1,10 @@
-Spencer Fletcher, Jacob Trokel
-
+# Graphs
+Authors: Spencer Fletcher, Jacob Trokel
+### Project Goal
+The goal of this project was to create a Java program that isolated a graph from contagion. There are two main ways to go about this. The first is by simply removing the nodes with the highest degree (number of connections to other nodes). The other method is to calculate a node's collective influence, which uses mathematical formulas to try to remove the node that will affect the highest number of other nodes, either directly or indirectly. 
+### Running the File
 Run this file by entering in the command line java StopContagion (-d) (-r RADIUS) (-t) num_nodes input_file, where all arguments in parantheses are optional. If -d is added, then degree search is used instead of influence search. -r RADIUS specifies the radius for search as RADIUS, if not specified the default is 2. -t specifies whether or not to print out trace, which will display the connected components after each node removal. num_nodes is mandatory,  and specifies how many nodes should be removed. input_file is also mandatory, and specifies the file that the graph is being created from. 
-
-This program creates a graph from the passed file, and then searches for that graph using the passed parameters. Degree first removes the top num_nodes nodes from the graph, while influence search uses the influence to determine which nodes will be removed. The nodes removed are printed for degree first as (value connections), and for influence search as (value influence). These values are printed to standard output. 
-
-Sources used: findBall and findCollectiveInfluence use elements from the Breadth-First search found in Algorithms 4th Edition, Sedgewick - Wayne.
+### Technical Explanation of Project
+This program creates a graph from the passed file, and then searches for that graph using the passed parameters. The graph file uses the parameters given by the instructor, where every line in the given text file is a connection. For example, a text file with the lines 10 1, 1 11, and 10 13 would create a graph with nodes 10 and 1 connected, nodes 1 and 11 connected, and nodes 10 and 13 connected. Degree first removes the top num_nodes nodes from the graph, while influence search uses the influence to determine which nodes will be removed. The nodes removed are printed for degree first as (value connections), and for influence search as (value influence). These values are printed to standard output. 
+### Sources Used
+findBall and findCollectiveInfluence use elements from the Breadth-First search found in Algorithms 4th Edition, Sedgewick - Wayne.
